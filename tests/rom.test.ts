@@ -90,6 +90,9 @@ Deno.test("cas avec 1000, 500, 100, 50, 10, 5, et 1", () => {
     assertEquals(romanNumeral(2886), "MMDCCCLXXXVI");
 })
 
-Deno.test("cas spécial avec n-1", () => {
+Deno.test("cas spécial avec 10*n-1", () => {
     assertEquals(romanNumeral(19), "XIX");
+    assertEquals(romanNumeral(29), "XXIX");
+    assertEquals(romanNumeral(39), "XXXIX");
+    assertEquals(romanNumeral(69), "LXIX");
 })
