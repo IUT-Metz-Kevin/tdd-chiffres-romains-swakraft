@@ -1,4 +1,8 @@
 export function romanNumeral(value: number): string {
+    if (isNaN(value) || value <= 0 || value % 1 !== 0)  {
+        throw new Error("Invalid value");
+    }
+
     let result = "";
     while (value >= 1000) {
         result += "M";
