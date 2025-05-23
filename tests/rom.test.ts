@@ -18,3 +18,11 @@ Deno.test("Combo 1000 et 500", () => {
     assertEquals(romanNumeral(2500), "MMD");
     assertEquals(romanNumeral(1500), "MD");
 });
+
+Deno.test("cas avec 100", () => {
+    assertEquals(romanNumeral(100), "C");
+});
+
+Deno.test("cas avec multiples 100", () => {
+    assertEquals(romanNumeral(300), "CCC");
+});
