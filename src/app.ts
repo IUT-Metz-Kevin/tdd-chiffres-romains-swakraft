@@ -5,5 +5,10 @@ export function romanNumeral(value: number): string {
         value -= 1000;
     }
 
+    while (value >= 500) {
+        result += "D";
+        value -= 500;
+    }
+
     return result
 }
