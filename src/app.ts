@@ -35,5 +35,10 @@ export function romanNumeral(value: number): string {
         value -= 4;
     }
 
+    while (value >= 1) {
+        result += "I";
+        value -= 1;
+    }
+
     return result
 }
