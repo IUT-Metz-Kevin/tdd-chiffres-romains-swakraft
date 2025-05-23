@@ -25,5 +25,10 @@ export function romanNumeral(value: number): string {
         value -= 10;
     }
 
+    while (value >= 5) {
+        result += "V";
+        value -= 5;
+    }
+
     return result
 }
