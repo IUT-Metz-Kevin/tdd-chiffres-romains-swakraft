@@ -7,4 +7,9 @@ Deno.test("cas avec 1000", () => {
 
 Deno.test("cas avec multiples de 1000", () => {
     assertEquals(romanNumeral(2000), "MM");
+    assertEquals(romanNumeral(5000), "MMMMM");
+});
+
+Deno.test("cas avec 500", () => {
+    assertEquals(romanNumeral(500), "D");
 });
