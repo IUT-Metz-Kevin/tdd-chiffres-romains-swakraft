@@ -20,5 +20,10 @@ export function romanNumeral(value: number): string {
         value -= 50;
     }
 
+    while (value >= 10) {
+        result += "X";
+        value -= 10;
+    }
+
     return result
 }
