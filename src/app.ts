@@ -15,5 +15,10 @@ export function romanNumeral(value: number): string {
         value -= 100;
     }
 
+    while (value >= 50) {
+        result += "L";
+        value -= 50;
+    }
+
     return result
 }
