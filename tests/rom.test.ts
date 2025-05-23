@@ -102,3 +102,24 @@ Deno.test("cas avec 0", () => {
         romanNumeral(0);
     })
 })
+
+Deno.test("cas avec chiffre négatif", () => {
+    assertThrows(() => {
+        romanNumeral(-5);
+    })
+})
+
+Deno.test("cas avec chiffre non entier", () => {
+    assertThrows(() => {
+        romanNumeral(5.7);
+    })
+})
+
+Deno.test("cas avec chiffre spcial", () => {
+    assertThrows(() => {
+        romanNumeral(Infinity);
+    });
+    assertThrows(() => {
+        romanNumeral(NaN);
+    })
+})
