@@ -71,3 +71,8 @@ Deno.test("cas avec 1000, 500, 100, 50, 10 et 5", () => {
 Deno.test("cas avec 4", () => {
     assertEquals(romanNumeral(4), "IV");
 });
+
+Deno.test("cas avec 1000, 500, 100, 50, 10, 5 et 4", () => {
+    assertEquals(romanNumeral(1664), "MDCLXIV");
+    assertEquals(romanNumeral(2884), "MMDCCCLXXXIV");
+})
