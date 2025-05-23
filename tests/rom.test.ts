@@ -36,3 +36,7 @@ Deno.test("cas avec 1000, 500 et 100", () => {
     assertEquals(romanNumeral(1600), "MDC");
     assertEquals(romanNumeral(2800), "MMDCCC");
 });
+
+Deno.test("cas avec 50", () => {
+    assertEquals(romanNumeral(50), "L");
+});
