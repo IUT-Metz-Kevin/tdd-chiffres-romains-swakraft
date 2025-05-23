@@ -40,3 +40,8 @@ Deno.test("cas avec 1000, 500 et 100", () => {
 Deno.test("cas avec 50", () => {
     assertEquals(romanNumeral(50), "L");
 });
+
+Deno.test("cas avec 1000, 500, 100 et 50", () => {
+    assertEquals(romanNumeral(1650), "MDCL");
+    assertEquals(romanNumeral(2850), "MMDCCCL");
+});
