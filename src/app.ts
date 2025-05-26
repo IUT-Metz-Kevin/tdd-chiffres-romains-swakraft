@@ -54,6 +54,8 @@ export function numeralToRoman(value: number): string {
 
 export function RomanToNumeral(value: string): number {
     let result = 0;
-
+    if (value.includes("I")) {
+        result += 1
+    } 
     return result
 }
