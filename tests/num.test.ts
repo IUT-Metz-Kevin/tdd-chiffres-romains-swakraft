@@ -59,3 +59,8 @@ Deno.test("cas divers avec 50 et autres", () => {
 Deno.test("cas avec 100", () => {
     assertEquals(RomanToNumeral("C"), 100);
 })
+
+Deno.test("cas avec mutiples de 100", () => {
+    assertEquals(RomanToNumeral("C"), 100);
+    assertEquals(RomanToNumeral("CCC"), 300);
+})
