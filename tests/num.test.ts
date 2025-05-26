@@ -51,3 +51,11 @@ Deno.test("ok on balance la sauce", () => {
 Deno.test("cas avec 50", () => {
     assertEquals(RomanToNumeral("L"), 50);
 })
+
+Deno.test("cas divers avec 50 et autres", () => {
+    assertEquals(RomanToNumeral("LXIII"), 63);
+})
+
+Deno.test("cas avec 100", () => {
+    assertEquals(RomanToNumeral("C"), 100);
+})
