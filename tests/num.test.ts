@@ -17,3 +17,7 @@ Deno.test("cas avec 4", () => {
 Deno.test("cas avec 5", () => {
     assertEquals(RomanToNumeral("V"), 5);
 })
+
+Deno.test("cas avec 6", () => {
+    assertEquals(RomanToNumeral("VI"), 6);
+})
