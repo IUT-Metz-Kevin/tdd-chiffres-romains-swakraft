@@ -52,47 +52,32 @@ export function numeralToRoman(value: number): string {
     return result
 }
 
+// TDD
 export function RomanToNumeral(value: string): number {
+    value = value.trim()
     let result = 0;
-
-    if (value.includes("X")) {
-        result += 10
-    }
-    
-    else if (value.includes("IX")) {
-        result += 9
-    }
-    
-    else if (value.includes("VIII")) {
-        result += 8
-    }
-    
-    else if (value.includes("VII")) {
-        result += 7
-    }
-    
-    else if (value.includes("VI")) {
-        result += 6
-    }
-    
-    else if (value.includes("V")) {
-        result += 5
+    const romanNum: { [key: string]: number } = {
+        "X": 10,
+        "IX": 9,
+        "V": 5,
+        "IV": 4,
+        "I": 1
     }
 
-    else if (value.includes("IV")) {
-        result += 4
+    for (let i = 0; i <= value.length - 1; i++) {
+        const char2 = value.slice(i, i + 2);
+        const char1 = value[i];
+        console.log(char2, char1)
+
+        if (romanNum[char2]) {
+            result += romanNum[char2];
+            i++;
+        } else if (romanNum[char1]) {
+            result += romanNum[char1];
+        } else {
+            throw new Error("wtf");
+        }
     }
 
-    else if (value.includes("III")) {
-        result += 3
-    } 
-    
-    else if (value.includes("II")) {
-        result += 2
-    } 
-
-    else if (value.includes("I")) {
-        result += 1
-    } 
     return result
 }
