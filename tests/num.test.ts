@@ -69,3 +69,7 @@ Deno.test("cas avec 100, 50 et autres", () => {
     assertEquals(RomanToNumeral("CLXV"), 165);
     assertEquals(RomanToNumeral("CCCLXXXIV"), 384);
 })
+
+Deno.test("cas avec 500", () => {
+    assertEquals(RomanToNumeral("D"), 500);
+})
