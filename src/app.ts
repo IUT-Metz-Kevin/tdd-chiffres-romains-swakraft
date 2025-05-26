@@ -57,6 +57,7 @@ export function RomanToNumeral(value: string): number {
     value = value.trim()
     let result = 0;
     const romanNum: { [key: string]: number } = {
+        "C": 100,
         "L": 50,
         "X": 10,
         "IX": 9,
