@@ -1,4 +1,4 @@
-export function romanNumeral(value: number): string {
+export function numeralToRoman(value: number): string {
     if (isNaN(value) || value <= 0 || value % 1 !== 0)  {
         throw new Error("Invalid value");
     }
@@ -48,6 +48,12 @@ export function romanNumeral(value: number): string {
         result += "I";
         value -= 1;
     }
+
+    return result
+}
+
+export function RomanToNumeral(value: string): number {
+    let result = 0;
 
     return result
 }
