@@ -67,7 +67,6 @@ export function RomanToNumeral(value: string): number {
     for (let i = 0; i <= value.length - 1; i++) {
         const char2 = value.slice(i, i + 2);
         const char1 = value[i];
-        console.log(char2, char1)
 
         if (romanNum[char2]) {
             result += romanNum[char2];

@@ -37,3 +37,13 @@ Deno.test("cas avec 9", () => {
 Deno.test("cas avec 10", () => {
     assertEquals(RomanToNumeral("X"), 10);
 })
+
+Deno.test("cas avec multiples de 10", () => {
+    assertEquals(RomanToNumeral("XX"), 20);
+    assertEquals(RomanToNumeral("XXXX"), 40);
+})
+
+Deno.test("ok on balance la sauce", () => {
+    assertEquals(RomanToNumeral("XII"), 12);
+    assertEquals(RomanToNumeral("XXIV"), 24);
+})
